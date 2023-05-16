@@ -36,7 +36,11 @@ const restaurant = {
 
     orderDelivery: function ({ starterIndex, mainIndex, address, time }) {
         console.log(`Food ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered at ${address} at ${time}..!`);
-    }
+    },
+
+    orderPasta: function (ing1, ing2, ing3) {
+        console.log(`Here's your pasta with ${ing1}, ${ing2} and ${ing3}...!`);
+    },
 
 };
 
@@ -132,4 +136,63 @@ const restaurant = {
 //     mainIndex: 1,
 //     starterIndex: 3,
 // });
+
+
+//////////// The Spread Operators (...) ////////////////
+
+// const arr = [4, 8, 3, 9];
+
+// //normal way of doing it
+// const newArr = [2, 3, arr[0], arr[1], arr[2], arr[3]];
+// console.log(newArr);
+
+// //Using (...) Spread Operator
+// const newArray = [2, 3, ...arr];
+// console.log(newArray);
+// console.log(...arr);
+
+// //Copy Array
+// const copyMainMenu = [...restaurant.mainMenu];
+// console.log(copyMainMenu);
+
+// //Joining two or more Arrays
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// console.log(menu);
+
+// //Iterables: arrays, strings, maps, sets, Not Objects
+// const str = "Nikhil";
+// const letters = [...str, ' ', 'S.'];
+// console.log(letters);
+// console.log(...str);
+// // console.log(`${...str} are letters in my name...`); //cause an error
+
+// //Restaurant example
+// const ingredients = [
+//     // prompt("Let's make my pasta with igredients 1..?"),
+//     // prompt("Make my pasta with ingredients 2..?"),
+//     // prompt("Make my pasta with ingredients 3..?"),
+// ];
+
+// // console.log(ingredients);
+
+// // restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+// restaurant.orderPasta(...ingredients);
+
+// //objects
+// const newRestaurant = { founded: 1998, ...restaurant, founder: 'Guiseppe', };
+
+// const copyRestaurant = { ...newRestaurant };
+// copyRestaurant.restaurantName = 'Ristorante Roma'; //can change keys inside the objects and original would remain intact
+// console.log(copyRestaurant.restaurantName);
+// console.log(newRestaurant.restaurantName);
+
+
+
+
+
+
+
+
+
+
 
