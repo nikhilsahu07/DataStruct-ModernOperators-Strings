@@ -42,6 +42,10 @@ const restaurant = {
         console.log(`Here's your pasta with ${ing1}, ${ing2} and ${ing3}...!`);
     },
 
+    orderPizza: function (mainIngredient, ...restIngredients) {
+        // console.log(restIngredients);
+        console.log(`Here's your delicious pizza with ${mainIngredient} ${restIngredients.length ? `${restIngredients}` : `pizza with oregeno and chilli flakes`}..!`);
+    },
 };
 
 // const arr = [1, 2, 3, 4];
@@ -187,12 +191,41 @@ const restaurant = {
 // console.log(newRestaurant.restaurantName);
 
 
+///////////////// Rest Pattern and Parameters ////////////////////
 
+// // SPREAD, because on RIGHT side of =
+// const arr = [5, 9, 4, ...[3, 1]];
 
+// //REST, because on LEFT side of =
+// const [a, b, ...others] = [2, 9, 7, 8, 1, 0]; //returns a array of rest elements in a literal
+// console.log(a, b, others);
 
+// const [pizza, , rissoto, ...otherDishes] = [
+//     ...restaurant.mainMenu,
+//     ...restaurant.starterMenu
+// ]; //Rest operator must be the last element
+// console.log(pizza, rissoto, otherDishes);
 
+// //Objects
 
+// const { sat, ...weekdays } = restaurant.openingHours
+// console.log(sat, weekdays);
 
+// //Functions
+// function add(...numbers) {
+//     let sum = 0;
+//     for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+//     console.log(sum);
 
+// };
 
+// add(2, 4);
+// add(3, 5, 1);
+// add(5, 7, 9, 1);
+// add(3, 6, 1, 9, 3, 8, 2);
 
+// const x = [5, 3, 1, 9, 5];
+// add(...x);
+
+// restaurant.orderPizza('mushrooms', 'onion', 'olives', 'rosemerry');
+// restaurant.orderPizza('Chicken Tikka');
