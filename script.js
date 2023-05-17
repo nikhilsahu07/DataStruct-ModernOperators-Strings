@@ -229,3 +229,45 @@ const restaurant = {
 
 // restaurant.orderPizza('mushrooms', 'onion', 'olives', 'rosemerry');
 // restaurant.orderPizza('Chicken Tikka');
+
+
+///////////// Short Circuiting (&& and ||) ///////////////
+
+// console.log("------ OR -------");
+
+// //Use ANY data types, return ANY data type, short circuting
+
+// //first truthy value or the last falsy value
+// console.log(7 || 'Nikhil');
+// console.log(0 || 3);
+// console.log('' || 0);
+// console.log(false || 'Jonas');
+// console.log(true || 0);
+// console.log(undefined || null);
+
+// console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+// restaurant.numGuests = 0;
+// const guest1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// console.log(guest1);
+
+// // const guest2 = restaurant.numGuests || 10;
+// // console.log(guest2);
+
+// console.log("------ AND ------");
+
+// //the first falsy values or the last truthy value
+// console.log(6 && 'Nick');
+// console.log('' && 7);
+// console.log(null && true);
+// console.log(false && 'main');
+
+// const guest2 = restaurant.numGuests || 10;
+// console.log(guest2);
+
+// //Nullish: null and undefined (NOT 0 or '')
+// const guestCorrect = restaurant.numGuests ?? 10;
+// console.log(guestCorrect);
+
+
+
