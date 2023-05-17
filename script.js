@@ -46,6 +46,9 @@ const restaurant = {
         // console.log(restIngredients);
         console.log(`Here's your delicious pizza with ${mainIngredient} ${restIngredients.length ? `${restIngredients}` : `pizza with oregeno and chilli flakes`}..!`);
     },
+
+    // //Enhanced object literals
+    // franchiseLocation,
 };
 
 // const arr = [1, 2, 3, 4];
@@ -307,5 +310,25 @@ const restaurant = {
 // console.log(rest2.owner);
 
 
+/////////////// Looping Arrays: For-of loop /////////////////
+
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+// for (const item of menu) console.log(item);
+
+// for (const [index, item] of menu.entries()) { //returns an array [index, element] of the given array
+//     console.log(`${index + 1}: ${item} `);
+
+// }
+
+//////////////// Enhanced Object literals ///////////
+
+////ReferenceError: Cannot access 'franchiseLocation' before initialization
+////Put this before te restaurnt objects
+// const franchiseLocation = {
+//     Milan: '21, Milan, Italy',
+//     Rome: 'Street 12, Rome, Italy',
+//     Venice: 'Road 7, Venice, Italy',
+// };
 
 
