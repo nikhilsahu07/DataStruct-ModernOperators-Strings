@@ -49,6 +49,8 @@ const restaurant = {
 
     // //Enhanced object literals
     // franchiseLocation,
+
+    weekdays: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
 };
 
 // const arr = [1, 2, 3, 4];
@@ -330,5 +332,43 @@ const restaurant = {
 //     Rome: 'Street 12, Rome, Italy',
 //     Venice: 'Road 7, Venice, Italy',
 // };
+
+
+//////////////// Optional Chaining (?.) ///////////////////
+
+// // console.log(restaurant.openingHours.mon.open);  //cannot read the undefined property open from mon ERROR
+
+// if (restaurant.openingHours.mon && restaurant.openingHours.mon.open) console.log(restaurant.openingHours.mon.open);
+
+// //WITH optional chaining
+// console.log(restaurant.openingHours.mon?.open);
+
+// console.log(restaurant.openingHours?.mon?.open);
+
+// for (const day of restaurant.weekdays) {
+//     const open = restaurant.openingHours[day]?.open ?? `Closed..!`;
+//     console.log(`On ${day}, we open at ${open}`);
+// }
+
+// //Methods
+// const deliveryDetails = {
+//     address: 'Street 12, Venice, Italy',
+//     time: '12:15 PM',
+//     mainIndex: 1,
+//     starterIndex: 0,
+// };
+
+// (restaurant.orderDelivery?.({ ...deliveryDetails }) ?? console.log(`Method doesn't exit..!`));
+// (restaurant.order?.(1, 2) ?? console.log(`Method doesn't exit..!`));
+// (restaurant.orderRissoto?.('a', 'b', 'c') ?? console.log(`Method doesn't exit`));
+
+// //Array
+// const users = [{ name: 'Jonas', email: 'heyjonas07@gmail.com' }]
+// // const users = []
+// console.log(users[0]?.name ?? `User array Empty`);
+
+// //Long form of above Optional chaining operator
+// if (users.length > 0) console.log(users[0].name)
+// else console.log(`User array Empty`);
 
 
