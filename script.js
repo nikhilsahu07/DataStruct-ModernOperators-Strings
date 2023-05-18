@@ -372,3 +372,33 @@ const restaurant = {
 // else console.log(`User array Empty`);
 
 
+////////////////// Looping Objects: Object keys, Values and Enteries ////////
+
+// //Property NAMES
+// const properties = Object.keys(restaurant.openingHours);
+// console.log(properties);
+
+// let openDays = `We are open on ${properties.length} days: `;
+
+// for (const day of Object.keys(restaurant.openingHours)) {
+//     openDays += `${day} ,`;
+// }
+// console.log(openDays);
+
+// //Property VALUES
+// const values = Object.values(restaurant.openingHours);
+// console.log(values);
+// for (const { open: openingTime, close: closingTime = [] } of values) {
+//     console.log(openingTime, closingTime);
+
+// }
+
+// //Property ENTRIES
+// const entries = Object.entries(restaurant.openingHours);
+// console.log(entries);
+
+// for (const [day, { open: o, close: c }] of entries) {
+//     console.log(day, o, c);
+
+// }
+
