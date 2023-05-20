@@ -402,3 +402,51 @@ const restaurant = {
 
 // }
 
+
+///////////////////////// Sets: Data Types /////////////////////////////////
+
+// // //set is collection of non-repetitve data-types
+// // const firstSet = new Set([2, 3, 4, 2]);
+// // console.log(typeof ordersSet, ordersSet); //set is a also a object
+
+// const ordersSet = new Set([
+//     'Pasta',
+//     'Pizza',
+//     'Pizza',
+//     'Rissotto',
+//     'Pasta',
+//     'Pizza',
+// ]);
+
+// console.log(ordersSet);
+
+// console.log(ordersSet.size, 'Items to be prepared for the order', ...ordersSet); //it also destructable and iterables
+// // console.log(ordersSet.size);
+
+// console.log(new Set('Nikhil'));
+
+// console.log(ordersSet.has('Pizza'));
+// console.log(ordersSet.has('Bread'));
+// ordersSet.add('Garlic Bread')
+
+// console.log(ordersSet.has('Garlic Bread'));
+
+// ordersSet.add('Garlic Bread');
+// ordersSet.add('Garlic Bread');
+
+// ordersSet.delete('Rissotto');
+
+// // ordersSet.clear();
+// console.log(ordersSet);
+
+// for (const order of ordersSet) console.log(order);
+
+// //Restaurant Example
+// const staffs = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+
+// const staffUnique = new Set(staffs);
+// console.log(staffUnique);
+// console.log(staffUnique.size);
+
+// console.log(new Set('Nikhil Sahu'), new Set('Nikhil Sahu').size);
+
