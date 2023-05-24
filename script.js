@@ -450,3 +450,43 @@ const restaurant = {
 
 // console.log(new Set('Nikhil Sahu'), new Set('Nikhil Sahu').size);
 
+
+// //////////////// Maps: The Fundamental /////////////////////
+
+// // Same as object collection of key-value pairs...Only difference is Key can be of any dataType
+// const rest = new Map();
+
+// rest.set('name', 'Classico Italiano');
+// rest.set(1, 'Firenze, Italy'); //Not only set the key-value pairs but also returns the Map
+// console.log(rest.set(2, 'Lisbon, Portugal'));
+
+// rest
+//     .set('categories', ['Italian', 'Pizzeria', 'Rosticceria', 'Bar'])
+//     .set('open', 11)
+//     .set('close', 23)
+//     .set(true, 'We are Open :D')
+//     .set(false, 'We are closed :(');
+
+// console.log(rest.get('categories'));
+// console.log(rest.get(true));
+// console.log(rest.get(1));
+
+// const time = 21; //
+
+// console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+// //Methods
+// console.log(rest.has('categories'));
+// rest.delete(2);
+// // rest.clear();
+// console.log(rest);
+// console.log(rest.size);
+
+// const arr = [1, 2]
+// // rest.set([1, 2], 'trialArr');
+// // console.log(rest.get([1, 2])); //Not the same (Search primitve,object and heap,stack memory)
+// rest.set(arr, 'trialArr');
+// console.log(rest.get(arr));
+
+// rest.set(document.querySelector('h1'), 'Heading'); //Remember DOM is not part of JS it's
+// // console.log(rest.get('h1'));
