@@ -490,3 +490,43 @@ const restaurant = {
 
 // rest.set(document.querySelector('h1'), 'Heading'); //Remember DOM is not part of JS it's
 // // console.log(rest.get('h1'));
+
+
+// ////////////// Maps Iteration //////////////////
+
+// const question = new Map([
+//     ['question', 'Which is the best programming language in the world?'],
+//     [1, 'C++'],
+//     [2, 'Java'],
+//     [3, 'Javascript'],
+//     [4, 'Python'],
+//     ['correct', 3],
+//     [true, 'Correct Answer 🎉'],
+//     [false, 'Try Again 😕'],
+// ]);
+
+// // console.log(question);
+
+// // //Convert OBJECTS into MAPS
+// // console.log(Object.entries(restaurant.openingHours));
+// // const hoursMap = new Map(Object.entries(restaurant.openingHours));
+// // console.log(hoursMap);
+
+
+// ////Quiz app
+// console.log(question);
+// console.log(question.get('question'));
+// for (const [key, value] of question) {
+//     if (typeof key === 'number') console.log(`Option ${key}: ${value}`);
+// }
+
+// const answer = 3 //Number(prompt('Enter the answer: '))
+// console.log(answer);
+// console.log(question.get(question.get('correct') === answer));
+
+// ////convert map to ARRAY
+// console.log(...question);
+// console.log([...question.entries()]);
+// console.log([...question.keys()]);
+// console.log([...question.values()]);
+
