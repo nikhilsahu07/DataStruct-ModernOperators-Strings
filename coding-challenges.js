@@ -170,3 +170,84 @@ for (const player of game.scored) {
 }
 
 console.log(scorers);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const gameEvents = new Map([
+    [17, '⚽ GOAL'],
+    [36, '🔁 Substitution'],
+    [47, '⚽ GOAL'],
+    [61, '🔁 Substitution'],
+    [64, '🟨 Yellow card'],
+    [69, '🟥 Red card'],
+    [70, '🔁 Substitution'],
+    [72, '🔁 Substitution'],
+    [76, '⚽ GOAL'],
+    [80, '⚽ GOAL'],
+    [92, '🟨 Yellow card'],
+]
+);
+
+// 1. Create an array 'events' of the different game events that happened (no 
+//     duplicates)
+
+const eventsUnique = new Set();
+
+for (const [, event] of gameEvents) { //Can use gameEvents.values() also
+    eventsUnique.add(event);
+}
+const events = [...eventsUnique];
+console.log(events);
+
+// // Alternative
+// for (const [, event] of gameEvents) {
+//     if (!events.includes(event)) events.push(event);
+// }
+// console.log(events);
+
+// 2. After the game has finished, is was found that the yellow card from minute 64
+// was unfair. So remove this event from the game events log.
+
+gameEvents.delete(64);
+console.log(gameEvents);
+
+// 3. Compute and log the following string to the console: "An event happened, on
+// average, every 9 minutes" (keep in mind that a game has 90 minutes)
+
+const excatTime = [...gameEvents.keys()].pop();
+
+console.log(`An event happened, on average, every ${excatTime / gameEvents.size} minutes.`);
+
+
+
+// let total = 0;
+// // const numbers = [];
+// // for (const [time] of gameEvents) {
+// //     numbers.push(time);
+
+// // };
+// // // console.log(numbers);
+// // // Alt. way
+// const numbers = [...gameEvents.keys()]
+
+// for (let i = 1; i < numbers.length; i++) {
+//     let diff = numbers[i] - numbers[i - 1];
+//     // console.log(diff);
+//     total += diff;
+//     // return total;
+// }
+// console.log(`An Event happened, on average, every ${total / gameEvents.size} minutes`);
+
+
+// //4. Loop over 'gameEvents' and log each element to the console, marking 
+// whether it's in the first half or second half (after 45 min) of the game, like this:
+// [FIRST HALF] 17: ⚽ GOAL
+
+for (const [time, event] of gameEvents) {
+    if (time < 45) {
+        console.log(`[FIRST HALF] ${time}: ${event}`);
+    } else {
+        console.log(`[SECOND HALF] ${time}: ${event}`);
+    }
+}
+
