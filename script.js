@@ -530,3 +530,48 @@ const restaurant = {
 // console.log([...question.keys()]);
 // console.log([...question.values()]);
 
+
+// ///////////////////// Working With Strings - Part 1 ///////////////////////
+
+// const airline = 'Tap Air Portugal'
+// const plane = 'A320'
+
+// console.log(plane[0]);
+// console.log(plane[1]);
+// console.log(plane[2]);
+// console.log(plane[3]);
+// console.log('B737'[0]);
+
+// console.log(airline.length);
+// console.log('B737'.length);
+
+// console.log(airline.indexOf('r'));
+// console.log(airline.lastIndexOf('r'));
+// console.log(airline.indexOf('Portugal'));
+
+// // Slice Method
+
+// console.log(airline.slice(4));
+// console.log(airline.slice(4, 7));
+
+// console.log(airline.slice(0, airline.indexOf(' ')));
+// console.log(airline.slice(airline.indexOf(' ') + 1, airline.lastIndexOf(' ')));
+
+// const checkMiddleSeat = function (seatNo) {
+//     // B and E are middle seats
+//     const s = seatNo.slice(-1);
+//     if (s == 'B' || s == 'E') console.log('You got middle seat..!🫥');
+//     else console.log('You got lucky..!🎉');
+
+// };
+// checkMiddleSeat('11B');
+// checkMiddleSeat('23C');
+// checkMiddleSeat('3E');
+// checkMiddleSeat('9E');
+
+// // since String is a primitive datatype we cannot alter or do operations on the string, so when we use methods
+// // js build a copy of a that string into object data structure and let us do operations on primitive datatypes
+// console.log(new String('Nikhil'));
+// console.log(typeof new String('heynikhil07@gmail.com'));
+
+// console.log(typeof new String('Chicku').slice(-1), new String('Chicku').slice(0, -1));
