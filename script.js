@@ -634,3 +634,70 @@ const restaurant = {
 // checkBaggage('I have a laptop, some Food and a pocket kniFe.');
 // checkBaggage('Socks and camera.');
 // checkBaggage('Got some snacks and a gUn for protection.')
+
+
+// /////////////////// Working With String- Part #3 ////////////////////
+
+// //Split and Join methods
+// console.log('Once+upon+a+time'.split('+')); // returns array of characters separated by character in split method
+// console.log('Nidhi sahu'.split(' '));
+
+// const [firstName, lastName] = 'Nidhi sahu'.split(' ');
+// const fullName = `Miss ${firstName} ${lastName}`
+// console.log(fullName);
+
+// const newName = ['Mr.', 'hikaru', lastName.toUpperCase()].join(' ');
+
+// console.log(newName);
+
+
+// const capitalizeName = function (passName) {
+//     const capitalizeNameArr = [];
+//     for (const n of passName.split(' ')) {
+//         // capitalizeNameArr.push(n.slice(0, 1).toUpperCase() + n.slice(1));
+//         capitalizeNameArr.push(n.replace(n[0], n[0].toUpperCase()));
+//     }
+//     console.log(capitalizeNameArr.join(' '));
+
+//     //...
+// }
+// capitalizeName('nidhi pidhhi dayan chudail');
+// capitalizeName('bobby fisher');
+// capitalizeName('mr. nakamura');
+
+// //Padding
+// const message = 'Go to gate 23!';
+// console.log(message.padStart(20, '*'));
+// console.log(message.padStart(20, '*').padEnd(26, '*'));
+
+// const maskedCrediential = function (aadharNum) {
+//     // const strAadhar = aadharNum + ''; //const strAadhar = String(aadharNum);
+//     // const lenAadhar = strAadhar.length;
+//     // console.log(strAadhar.replace(strAadhar.slice(0, lenAadhar - 4), '#'.repeat(lenAadhar - 4)));
+
+//     const strAadhar = aadharNum + '';
+//     console.log(strAadhar.slice(-4).padStart(strAadhar.length, '#'));
+// }
+
+// maskedCrediential(358877549050);
+// maskedCrediential('5625325486214');
+// maskedCrediential(4563887199524896);
+
+// //Repeat
+// const messageRepeat = 'Bad Weather... All Departures Delayed... \n';
+// console.log(messageRepeat.repeat(5));
+
+// const planesInLine = numPlanes => {
+//     console.log(`There are ${numPlanes} planes in line ${'✈️ '.repeat(numPlanes)}`);
+// };
+
+// planesInLine(5);
+// planesInLine(3);
+// planesInLine(12);
+// planesInLine(7);
+
+// // concat method used to add more than two strings into one...
+// console.log('Hello'.concat('world', 'everyone'));
+
+// //Google and research many more string methods in Javascript
+
