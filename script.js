@@ -575,3 +575,62 @@ const restaurant = {
 // console.log(typeof new String('heynikhil07@gmail.com'));
 
 // console.log(typeof new String('Chicku').slice(-1), new String('Chicku').slice(0, -1));
+
+
+// /////////////////////////// Working With Strings: Part 2 /////////////////////////////////
+
+// const airline = 'Tap Air Portugal';
+
+// console.log(airline.toUpperCase());
+// console.log(airline.toLowerCase());
+
+// //fixing names string
+// const fixPassengersName = (passName) => {
+//     return passName.slice(0, 1).toUpperCase() + passName.slice(1).toLowerCase();
+// };
+// console.log(fixPassengersName('nIkhIL'));
+
+// //comparing email
+// let emailId = ' HeyNiKhIl07   @Gmail.com  \n';
+
+// const fixEmail = (email) => {
+//     return email.toLowerCase().replace(/\s+/g, '').trim();
+// };
+
+// console.log(fixEmail(emailId));
+
+// //Replacing strings
+// const priceGB = '288,97£';
+// const priceIND = (priceGB.replace(',', '.').replace('£', '$'));
+
+// const convertGbToINR = (priceInGB) => {
+//     const currencyNum = Number(priceInGB.replace(',', '.').replace('£', ''));
+//     const InrValue = (currencyNum * 102).toFixed(2);
+//     return '₹' + InrValue;
+// }
+
+// console.log(convertGbToINR(priceGB));
+
+// const announcement = 'All Passengers come to boarding door 23. Boarding door 23.';
+// console.log(announcement.replace(/door/g, 'gate'));
+
+// //Booleans
+// const plane = 'AirBus A320neo';
+// console.log(plane.includes('A320') && plane.includes('boeing'));
+// console.log(plane.startsWith('AirB'));
+// console.log(plane.endsWith('neo'));
+
+// if (plane.startsWith('AirBus') && plane.endsWith('neo')) {
+//     console.log('The bus is a part of NEW AIRBUS FAMILY..!');
+
+// }
+
+
+// const checkBaggage = function (baggage) {
+//     const illigalItems = baggage.toLowerCase().includes('knife') || baggage.toLowerCase().includes('gun');
+//     illigalItems ? console.log('You are NOT allowed on board..!') : console.log('Welcome aboard..!');
+
+// }
+// checkBaggage('I have a laptop, some Food and a pocket kniFe.');
+// checkBaggage('Socks and camera.');
+// checkBaggage('Got some snacks and a gUn for protection.')
