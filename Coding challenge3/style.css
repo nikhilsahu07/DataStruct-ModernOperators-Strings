@@ -1,0 +1,44 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.fullscreen-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    background-color: #f1f1f1;
+}
+
+textarea {
+    width: 80%;
+    height: 30%;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    resize: none;
+    font-size: 100px;
+    /* Adjust the font size as desired */
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+textarea:focus {
+    border-color: #66afe9;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
